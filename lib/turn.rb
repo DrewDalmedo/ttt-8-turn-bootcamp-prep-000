@@ -28,7 +28,10 @@ end
 def move(board, index, char)
   if (valid_move?(board, index))
     board[index] = char
+    return true
   end
+
+  return false
 end
 
 def turn(board)
