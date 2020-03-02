@@ -35,15 +35,15 @@ def move(board, index, char)
 end
 
 def input_to_index(input)
-  input = input.to_i - 1
+  return input.to_i - 1
 end
 
 def turn(board)
   puts "Please enter 1-9:"
   user_input = gets.strip
-  input_to_index(user_input)
+  index = input_to_index(user_input)
 
-  if !(move(board, user_input, "X"))
+  if !(move(board, index, "X"))
     turn(board)
   else
     display_board(board)
