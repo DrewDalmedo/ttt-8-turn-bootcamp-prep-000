@@ -39,5 +39,7 @@ def turn(board)
   input = (gets.strip).to_i
   if !(move(board, input, "X"))
     turn(board)
+  else
+    display_board(board)
   end
 end
